@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text, TextInput, View, Image } from 'react-native';
 import { useRef, useState, useEffect } from 'react';
 import * as MediaLibrary from 'expo-media-library';
-import * as FileSystem from 'expo-file-system';
+// import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';
 
 import { css, cutString, horizontalScale } from '../../style';
@@ -229,13 +229,13 @@ export default function MessageDetailPage(props) {
 
     const downloadFile = (url)=>{
        
-        FileSystem.downloadAsync(url, url)
-        .then(({ url }) => {
-            saveFile(url);
-          })
-          .catch(error => {
-            console.error(error);
-          })
+        // FileSystem.downloadAsync(url, url)
+        // .then(({ url }) => {
+        //     saveFile(url);
+        //   })
+        //   .catch(error => {
+        //     console.error(error);
+        //   })
     }
     
     const saveFile = async (fileUri) => {
