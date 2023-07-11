@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "app",
+    "slug": "app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+   
+    "REACT_APP_BASE_URL": "https://jobi.work",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "NSCameraUsageDescription": "This app uses the camera to let user put a photo in his profile page.",
+      "NSPhotoLibraryUsageDescription": "This app needs access to the photo library to select photos",
+      "supportsTablet": true
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA_ROLL",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.jobiworktest.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1326e68a-3efa-4fe0-a1d7-91a7f90216a4"
+      }
+    }
+  }
+}
